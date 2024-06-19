@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LABS</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Device Details</h1>
+
+<!-- Display lab details in a table -->
+<table>
+    <thead>
+        <tr>
+            <th>Computer ID</th>
+            <th>Computer Name</th>
+            <th>Computer Status</th>
+            <th>last Heartbeat</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {% for computer in computers %}
+            <tr>
+                <td>{{ computer.Computer_ID }}</td>
+                <td>{{ computer. Computer_Name }}</td>
+                <td>{{ computer.Computer_Status }}</td>
+                <td>{{ computer.Last_Heartbeat }}</td>
+                <!--<td><button onclick="">Choose</button></td>-->
+                <td>
+                    
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<script>
+    // Function to handle lab selection
+    function chooseLab(labId) {
+        // Redirect to the FastAPI endpoint with the chosen Lab_ID
+        
+    }
+</script>
+
+</body>
+</html>
